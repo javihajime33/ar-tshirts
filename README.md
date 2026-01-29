@@ -27,3 +27,62 @@ This project allows you to create T-shirts with unique printed designs that trig
 
 ## **Project Structure**
 
+ar-tshirts/
+├─ index.html <-- main AR webpage
+├─ style.css <-- global styles
+├─ main.js <-- AR logic: detects markers and triggers effects
+├─ assets/
+│ ├─ markers/ <-- MindAR marker files for each T-shirt
+│ │ ├─ tshirt1.mind
+│ │ ├─ tshirt2.mind
+│ │ └─ tshirt3.mind
+│ ├─ models/ <-- sprites or 3D models for each T-shirt
+│ │ ├─ tshirt1/
+│ │ │ ├─ frame_0.png
+│ │ │ ├─ frame_1.png
+│ │ │ └─ ...
+│ │ ├─ tshirt2/
+│ │ │ ├─ animation.glb
+│ │ │ └─ ...
+│ │ └─ tshirt3/
+└─ README.md
+
+---
+
+## **Adding a New T-Shirt**
+
+1. Create a new marker using MindAR's [Image Target Generator](https://hiukim.github.io/mind-ar-js-doc/tools/target-image-generator.html).  
+2. Save the `.mind` file in `assets/markers/`.  
+3. Create a new folder in `assets/models/` with your sprites or 3D model.  
+4. Add a new entry in `main.js` with the marker path and effect type.  
+5. Commit and push changes to GitHub.  
+
+The new T-shirt will be automatically recognized when scanned with the same QR code.
+
+---
+
+## **Requirements**
+
+- Mobile device with a camera and WebGL support.  
+- Modern browser (Chrome, Safari, Firefox).  
+- Internet connection to access GitHub Pages.  
+
+---
+
+## **Demo**
+
+Once deployed on GitHub Pages, scan the same QR code printed on any T-shirt to see the AR effects live.
+
+---
+
+## **Technologies Used**
+
+- [MindAR.js](https://hiukim.github.io/mind-ar-js-doc/) for marker-based AR.  
+- [Three.js](https://threejs.org/) for rendering 2D/3D content.  
+- [GitHub Pages](https://pages.github.com/) for hosting the web app.
+
+---
+
+## **License**
+
+MIT License
